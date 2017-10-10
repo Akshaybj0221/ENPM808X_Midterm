@@ -2,7 +2,23 @@
 [![Build Status](https://travis-ci.org/dpiet/cpp-boilerplate.svg?branch=master)](https://travis-ci.org/dpiet/cpp-boilerplate)
 [![Coverage Status](https://coveralls.io/repos/github/dpiet/cpp-boilerplate/badge.svg?branch=master)](https://coveralls.io/github/dpiet/cpp-boilerplate?branch=master)
 ---
-Lets make some changes to show in git
+
+##Google Spreadsheets Links Below:
+
+The link to the defect log, time log, product backlog, Iteration backlog, release backlog table are as follows:
+
+Product Backlog: https://docs.google.com/spreadsheets/d/1ARE-m1TVrMjwP5QnjJDIy7vjO3YFEOjuipjcBgkJD4w/edit?usp=sharing
+
+Iteration Backlog: https://docs.google.com/spreadsheets/d/1hsRM5sYC3laXD_c4UtU0Pys1ZRHazFw-7FRlQcmtSgg/edit?usp=sharing
+
+Release Backlog Table: https://docs.google.com/spreadsheets/d/1CuWvDiuVYU89Ndl6akPYEkMMkhjtW8jLH_CkdJijKRQ/edit?usp=sharing
+
+
+Time Log: https://docs.google.com/spreadsheets/d/1ZnZWze3-v8BWkhG6UbG-DKi6_Gh3Hk_-zbDt4oEi1Eo/edit?usp=sharing
+
+Defect Log: https://docs.google.com/spreadsheets/d/1d6eSZiVCmlSMt_dPw7nbapbw6CTz7TilsnyG3huVssA/edit?usp=sharing
+
+
 ## Overview
 
 Simple starter C++ project with:
