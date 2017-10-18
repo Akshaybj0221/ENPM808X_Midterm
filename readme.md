@@ -112,26 +112,9 @@ For more queries check this link: https://docs.opencv.org/2.4/doc/tutorials/intr
 - GUI will open, add the directory where you want the files to be generated and the project source directory.
 - Press run wizard and the files will be generated.
 
-- The doxygen files can be found in the folder "docs".
+The doxygen files can be found in the folder "docs".
 
-## Standard install via command-line
-```
-git clone --recursive https://github.com/dpiet/cpp-boilerplate
-cd <path to repository>
-mkdir build
-cd build
-cmake ..
-make
-Run tests: ./test/cpp-test
-Run program: ./app/shell-app
-```
-
-## Building for code coverage (for assignments beginning in Week 4)
-```
-sudo apt-get install lcov
-cmake -D COVERAGE=ON -D CMAKE_BUILD_TYPE=Debug ../
-make
-make code_coverage
-```
-This generates a index.html page in the build/coverage sub-directory that can be viewed locally in a web browser.
-
+## NOTE:
+If you are unable to run the software on Ubuntu, then go use Visual studio in Windows platform.
+- Go to the folder WindowsVB in the repository
+- Run the shell app in the /WindowsVB/app folder  OR Open the WindowsVB folder as a C++ Project in Visual studio and run main.cpp
