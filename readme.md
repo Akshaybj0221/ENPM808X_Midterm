@@ -97,13 +97,22 @@ For more queries check this link: https://docs.opencv.org/2.4/doc/tutorials/intr
 - open terminal
 - write cmake .
 - write make
-- Run shell-app OR Run main.cpp from the app folder using the cpp executable command.
 
 ## How to run demo
+- Run shell-app OR Run main.cpp from the app folder using the cpp executable command.
 
 ## How to run tests
+- Run test.cpp in the ubuntu terminal from the test folder.
+- The readme shows the test rate using travis.
 
 ## How to generate doxygen documentation
+- Open terminal
+- Install doxygen wizard in ubuntu using .
+- Write doxywizard
+- GUI will open, add the directory where you want the files to be generated and the project source directory.
+- Press run wizard and the files will be generated.
+
+- The doxygen files can be found in the folder "docs".
 
 ## Standard install via command-line
 ```
