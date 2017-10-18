@@ -116,5 +116,9 @@ The doxygen files can be found in the folder "docs".
 
 ## NOTE:
 If you are unable to run the software on Ubuntu, then go use Visual studio in Windows platform.
-- Go to the folder WindowsVB in the repository
-- Run the shell app in the /WindowsVB/app folder  OR Open the WindowsVB folder as a C++ Project in Visual studio and run main.cpp
+- Go to the folder "opencv32" in the repository
+- Click open project
+- Run the opencv32.sln in the opencv32 folder inside visual studio.
+- Run main.cpp
+  OR
+  Open the /opencv32/opencv32 folder in the repository as a C++ Project in Visual studio and run main.cpp.
