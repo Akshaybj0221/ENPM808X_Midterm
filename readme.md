@@ -48,7 +48,62 @@ Its funtionality has been tested on multiple test videos and software has a succ
 The working output of the software can be seen in the output folder of the repository or the link below:
 https://github.com/Akshaybj0221/ENPM808X_Midterm.git
 
-##
+## License
+
+MIT License
+
+Copyright (c) [2017] [Akshay Bajaj]
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+## Dependencies
+This software needs external dependencies such as OpenCV. In order to add those dependencies, follow following instructions:
+
+- Open the project in Eclipse.
+- We have to tell OpenCV where the OpenCV headers and libraries are. For this, do the following:
+- Go to Project–>Properties
+- In C/C++ Build, click on Settings. At the right, choose the Tool Settings Tab. Here we will enter the headers and libraries info:
+- In GCC C++ Compiler, go to Includes. In Include paths(-l) you should include the path of the folder where opencv was installed. In our example, this is /usr/local/include/opencv.
+- Now go to GCC C++ Linker,there you have to fill two spaces:
+- First in Library search path (-L) you have to write the path to where the opencv libraries reside, in my case the path is: /usr/local/lib
+- Then in Libraries(-l) add the OpenCV libraries that you may need. Usually just the 3 first on the list below are enough (for simple applications) 
+- Now you are done. Click OK
+- Your project should be ready to be built. For this, go to Project->Build all
+- If you check in your folder, there should be an executable there.
+- Put the video file in the same directory as source file and Run.
+
+For more queries check this link: https://docs.opencv.org/2.4/doc/tutorials/introduction/linux_eclipse/linux_eclipse.html#using-opencv-with-eclipse-plugin-cdt 
+
+## How to build
+
+- clone the project from the given github repository "https://github.com/Akshaybj0221/ENPM808X_Midterm.git".
+- go in the project directory
+- open terminal
+- write cmake .
+- write make
+- Run shell-app OR Run main.cpp from the app folder using the cpp executable command.
+
+## How to run demo
+
+## How to run tests
+
+## How to generate doxygen documentation
 
 ## Standard install via command-line
 ```
