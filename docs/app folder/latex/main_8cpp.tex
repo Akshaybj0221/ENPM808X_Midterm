@@ -1,0 +1,70 @@
+\hypertarget{main_8cpp}{}\section{/home/viki/\+E\+N\+P\+M808\+X\+\_\+\+Midterm/app/main.cpp File Reference}
+\label{main_8cpp}\index{/home/viki/\+E\+N\+P\+M808\+X\+\_\+\+Midterm/app/main.\+cpp@{/home/viki/\+E\+N\+P\+M808\+X\+\_\+\+Midterm/app/main.\+cpp}}
+
+
+This is the main file to run the Motion Tracker.  
+
+
+{\ttfamily \#include \char`\"{}stdafx.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Motion\+Tracker.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$lib.\+hpp$>$}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+Include dependency graph for main.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This is the main file to run the Motion Tracker. 
+
+Run the vision system which tracks motion of the objects Press \textquotesingle{}t\textquotesingle{} to start tracking (You can toggle by pressing \textquotesingle{}t\textquotesingle{} again) Press \textquotesingle{}p\textquotesingle{} to pause the video Press \textquotesingle{}esc\textquotesingle{} to terminate the program
+
+\begin{DoxyAuthor}{Author}
+Akshay Bajaj 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2017/10/16 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\index{main.\+cpp@{main.\+cpp}!main@{main}}
+\index{main@{main}!main.\+cpp@{main.\+cpp}}
+\subsubsection[{\texorpdfstring{main()}{main()}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\label{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}
+$<$ set up the matrices that we will need the two frames we will be comparing
+
+$<$ we can loop the video by re-\/opening the capture every time the video reaches its last frame
+
+$<$ Call Get Video Function
+
+$<$ read first frame
+
+$<$ copy second frame
+
+$<$ Call Processing function and get threshold value
+
+$<$ if tracking enabled, search for contours in our thresholded image
+
+$<$ Call search\+For\+Motion function
+
+$<$s how our captured frame
+
+$<$ check to see if a button has been pressed.
+
+$<$ Call control loop function
+
+$<$ release the capture before re-\/opening and looping again. 

@@ -1,0 +1,153 @@
+\hypertarget{class_motion_tracker}{}\section{Motion\+Tracker Class Reference}
+\label{class_motion_tracker}\index{Motion\+Tracker@{Motion\+Tracker}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Video\+Capture \hyperlink{class_motion_tracker_aeeac24436c107964defb0da343573d37}{get\+Video} ()
+\item 
+Mat \hyperlink{class_motion_tracker_af94699e8524f6227ab4f25283c80a1a8}{Processing} (Video\+Capture, Mat, Mat)
+\item 
+void \hyperlink{class_motion_tracker_a69e04a4d0a7b623284ca74d1b094cabf}{tagging} (Rect object\+Bounding\+Rectangle, Mat \&camera\+Feed)
+\item 
+void \hyperlink{class_motion_tracker_acc3e04289a770c5d25e7e25278c873c7}{search\+For\+Motion} (Mat threshold\+Image, Mat \&camera\+Feed)
+\item 
+bool \hyperlink{class_motion_tracker_ad3869c9b786a88ed9793341cdf1432cb}{control\+Loop} (bool, bool)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int {\bfseries the\+Object} \mbox{[}2\mbox{]} = \{ 0,0 \}\hypertarget{class_motion_tracker_a68439780de998db60971232ebb6b3fdb}{}\label{class_motion_tracker_a68439780de998db60971232ebb6b3fdb}
+
+\item 
+Rect {\bfseries object\+Bounding\+Rectangle} = Rect(0, 0, 0, 0)\hypertarget{class_motion_tracker_a0661e19b606bca62523e9cdc6886b278}{}\label{class_motion_tracker_a0661e19b606bca62523e9cdc6886b278}
+
+\item 
+bool {\bfseries object\+Detected} = false\hypertarget{class_motion_tracker_a87d43478bd5d4293235a147d76d245df}{}\label{class_motion_tracker_a87d43478bd5d4293235a147d76d245df}
+
+\item 
+bool {\bfseries tracking\+Enabled} = false\hypertarget{class_motion_tracker_ad640d0c57f39113a6f214b58c9faf93e}{}\label{class_motion_tracker_ad640d0c57f39113a6f214b58c9faf93e}
+
+\item 
+bool {\bfseries pause} = false\hypertarget{class_motion_tracker_ae6a0d8ea864475f48aa7282725554749}{}\label{class_motion_tracker_ae6a0d8ea864475f48aa7282725554749}
+
+\item 
+Mat {\bfseries frame1}\hypertarget{class_motion_tracker_a1e7a0b2b0149ff4bdac58afa15cacf9e}{}\label{class_motion_tracker_a1e7a0b2b0149ff4bdac58afa15cacf9e}
+
+\item 
+Mat {\bfseries frame2}\hypertarget{class_motion_tracker_ab517bfdb4f65083195fc92e096143f69}{}\label{class_motion_tracker_ab517bfdb4f65083195fc92e096143f69}
+
+\item 
+Mat {\bfseries gray\+Image1}\hypertarget{class_motion_tracker_a4769c2bbfe3b96ebaa9e306bcb70cf5b}{}\label{class_motion_tracker_a4769c2bbfe3b96ebaa9e306bcb70cf5b}
+
+\item 
+Mat {\bfseries gray\+Image2}\hypertarget{class_motion_tracker_ac5d3a7852498f8b567254d7db5df5ae8}{}\label{class_motion_tracker_ac5d3a7852498f8b567254d7db5df5ae8}
+
+\item 
+Mat {\bfseries difference\+Image}\hypertarget{class_motion_tracker_aeb9d5fbadebbaf5908a650a530c24420}{}\label{class_motion_tracker_aeb9d5fbadebbaf5908a650a530c24420}
+
+\item 
+Mat {\bfseries threshold\+Image}\hypertarget{class_motion_tracker_ae065eedf0bd07e5bd5648bd9c570e84a}{}\label{class_motion_tracker_ae065eedf0bd07e5bd5648bd9c570e84a}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const int {\bfseries S\+E\+N\+S\+I\+T\+I\+V\+I\+T\+Y\+\_\+\+V\+A\+L\+UE} = 20\hypertarget{class_motion_tracker_ae5573a13e28208c112527f2f39e6a66f}{}\label{class_motion_tracker_ae5573a13e28208c112527f2f39e6a66f}
+
+\item 
+static const int {\bfseries B\+L\+U\+R\+\_\+\+S\+I\+ZE} = 10\hypertarget{class_motion_tracker_a58397526b49648d305f7703787f31c20}{}\label{class_motion_tracker_a58397526b49648d305f7703787f31c20}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\index{Motion\+Tracker@{Motion\+Tracker}!control\+Loop@{control\+Loop}}
+\index{control\+Loop@{control\+Loop}!Motion\+Tracker@{Motion\+Tracker}}
+\subsubsection[{\texorpdfstring{control\+Loop(bool, bool)}{controlLoop(bool, bool)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Motion\+Tracker\+::control\+Loop (
+\begin{DoxyParamCaption}
+\item[{bool}]{tracking\+Enabled, }
+\item[{bool}]{pause}
+\end{DoxyParamCaption}
+)}\hypertarget{class_motion_tracker_ad3869c9b786a88ed9793341cdf1432cb}{}\label{class_motion_tracker_ad3869c9b786a88ed9793341cdf1432cb}
+$<$ this 10ms delay is necessary for proper operation of this program if removed, frames will not have enough time to referesh and a blank image will appear.
+
+$<$ \textquotesingle{}esc\textquotesingle{} key has been pressed, exit program.
+
+$<$ \textquotesingle{}t\textquotesingle{} has been pressed. this will toggle tracking
+
+$<$ \textquotesingle{}p\textquotesingle{} has been pressed. this will pause/resume the code.
+
+$<$ stay in this loop until
+
+$<$ change pause back to false \index{Motion\+Tracker@{Motion\+Tracker}!get\+Video@{get\+Video}}
+\index{get\+Video@{get\+Video}!Motion\+Tracker@{Motion\+Tracker}}
+\subsubsection[{\texorpdfstring{get\+Video()}{getVideo()}}]{\setlength{\rightskip}{0pt plus 5cm}Video\+Capture Motion\+Tracker\+::get\+Video (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_motion_tracker_aeeac24436c107964defb0da343573d37}{}\label{class_motion_tracker_aeeac24436c107964defb0da343573d37}
+$<$ video capture object.
+
+$<$ adding video file \index{Motion\+Tracker@{Motion\+Tracker}!Processing@{Processing}}
+\index{Processing@{Processing}!Motion\+Tracker@{Motion\+Tracker}}
+\subsubsection[{\texorpdfstring{Processing(\+Video\+Capture, Mat, Mat)}{Processing(VideoCapture, Mat, Mat)}}]{\setlength{\rightskip}{0pt plus 5cm}Mat Motion\+Tracker\+::\+Processing (
+\begin{DoxyParamCaption}
+\item[{Video\+Capture}]{capture, }
+\item[{Mat}]{frame1, }
+\item[{Mat}]{frame2}
+\end{DoxyParamCaption}
+)}\hypertarget{class_motion_tracker_af94699e8524f6227ab4f25283c80a1a8}{}\label{class_motion_tracker_af94699e8524f6227ab4f25283c80a1a8}
+$<$ their grayscale images (needed for absdiff() function)
+
+$<$ resulting difference image
+
+$<$ thresholded difference image (for use in find\+Contours() function)
+
+$<$ convert frame1 to gray scale for frame differencing
+
+$<$ convert frame2 to gray scale for frame differencing
+
+$<$ perform frame differencing with the sequential images. This will output an \char`\"{}intensity image\char`\"{} do not confuse this with a threshold image, we will need to perform thresholding afterwards.
+
+$<$ threshold intensity image at a given sensitivity value
+
+$<$ blur the image to get rid of the noise. This will output an intensity image
+
+$<$ threshold again to obtain binary image from blur output \index{Motion\+Tracker@{Motion\+Tracker}!search\+For\+Motion@{search\+For\+Motion}}
+\index{search\+For\+Motion@{search\+For\+Motion}!Motion\+Tracker@{Motion\+Tracker}}
+\subsubsection[{\texorpdfstring{search\+For\+Motion(\+Mat threshold\+Image, Mat \&camera\+Feed)}{searchForMotion(Mat thresholdImage, Mat &cameraFeed)}}]{\setlength{\rightskip}{0pt plus 5cm}void Motion\+Tracker\+::search\+For\+Motion (
+\begin{DoxyParamCaption}
+\item[{Mat}]{threshold\+Image, }
+\item[{Mat \&}]{camera\+Feed}
+\end{DoxyParamCaption}
+)}\hypertarget{class_motion_tracker_acc3e04289a770c5d25e7e25278c873c7}{}\label{class_motion_tracker_acc3e04289a770c5d25e7e25278c873c7}
+$<$ notice how we use the \textquotesingle{}\&\textquotesingle{} operator for object\+Detected and camera\+Feed. This is because we wish to take the values passed into the function and manipulate them, rather than just working with a copy. eg. we draw to the camera\+Feed to be displayed in the main() function.
+
+$<$ these two vectors needed for output of find\+Contours
+
+$<$ find contours of filtered image using open\+CV find\+Contours function find\+Contours(temp,contours,hierarchy,\+C\+V\+\_\+\+R\+E\+T\+R\+\_\+\+C\+C\+O\+M\+P,\+C\+V\+\_\+\+C\+H\+A\+I\+N\+\_\+\+A\+P\+P\+R\+O\+X\+\_\+\+S\+I\+M\+P\+L\+E );// retrieves all contours
+
+$<$ if contours vector is not empty, we have found some objects
+
+$<$ the largest contour is found at the end of the contours vector we will simply assume that the biggest contour is the object we are looking for.
+
+$<$ make a bounding rectangle around the largest contour then find its centroid this will be the object\textquotesingle{}s final estimated position. \index{Motion\+Tracker@{Motion\+Tracker}!tagging@{tagging}}
+\index{tagging@{tagging}!Motion\+Tracker@{Motion\+Tracker}}
+\subsubsection[{\texorpdfstring{tagging(\+Rect object\+Bounding\+Rectangle, Mat \&camera\+Feed)}{tagging(Rect objectBoundingRectangle, Mat &cameraFeed)}}]{\setlength{\rightskip}{0pt plus 5cm}void Motion\+Tracker\+::tagging (
+\begin{DoxyParamCaption}
+\item[{Rect}]{object\+Bounding\+Rectangle, }
+\item[{Mat \&}]{camera\+Feed}
+\end{DoxyParamCaption}
+)}\hypertarget{class_motion_tracker_a69e04a4d0a7b623284ca74d1b094cabf}{}\label{class_motion_tracker_a69e04a4d0a7b623284ca74d1b094cabf}
+$<$ update the objects positions by changing the \textquotesingle{}the\+Object\textquotesingle{} array values
+
+$<$ make some temp x and y variables so we dont have to type out so much
+
+$<$ draw some crosshairs around the object
+
+$<$ write the position of the object to the screen 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/viki/\+E\+N\+P\+M808\+X\+\_\+\+Midterm/include/\hyperlink{_motion_tracker_8h}{Motion\+Tracker.\+h}\item 
+/home/viki/\+E\+N\+P\+M808\+X\+\_\+\+Midterm/include/\hyperlink{_motion_tracker_8cpp}{Motion\+Tracker.\+cpp}\end{DoxyCompactItemize}
