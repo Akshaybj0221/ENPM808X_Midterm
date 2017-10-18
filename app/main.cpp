@@ -40,8 +40,8 @@
 
 
 
-
-#include "/home/viki/ENPM808X_Midterm/include/MotionTracker.h"
+#include "stdafx.h"				///<C omment it out if using in  Ubuntu
+#include "MotionTracker.h"
 #include <lib.hpp>
 #include <iostream>
 

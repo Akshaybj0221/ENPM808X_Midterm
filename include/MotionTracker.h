@@ -36,7 +36,7 @@
 
 #ifndef INCLUDE_MOTIONTRACKER_HPP_
 #define INCLUDE_MOTIONTRACKER_HPP_
-#include "/home/viki/Desktop/OpenCV/opencv-3.2.0/include/opencv2/opencv.hpp"
+#include "opencv2/opencv.hpp"
 using namespace cv;
 
 

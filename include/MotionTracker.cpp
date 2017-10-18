@@ -34,11 +34,11 @@
 */
 
 
-
-#include </home/viki/Desktop/OpenCV/opencv-3.2.0/include/opencv/opencv/highgui.h>
+#include "stdafx.h"      ///< Comment it out if using Ubuntu
+#include <opencv/highgui.h>
 #include <iostream>
 #include <stdlib.h>
-#include "/home/viki/ENPM808X_Midterm/include/MotionTracker.h"
+#include "MotionTracker.h"
 using namespace std;
 
 //---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
