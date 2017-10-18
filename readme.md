@@ -112,6 +112,7 @@ For more queries check this link: https://docs.opencv.org/2.4/doc/tutorials/intr
 - GUI will open, add the directory where you want the files to be generated and the project source directory.
 - Press run wizard and the files will be generated.
 
+<<<<<<< HEAD
 - The doxygen files can be found in the folder "docs".
 
 ## Standard install via command-line
@@ -459,3 +460,15 @@ perspetive view (or Windows->Perspective->Open Perspective->C/C++).
 
     It is possible to manage version control through Eclipse and the git plugin, but it typically requires creating another project. If you're interested in this, try it out yourself and contact me on Canvas.
 
+=======
+The doxygen files can be found in the folder "docs".
+
+## NOTE:
+If you are unable to run the software on Ubuntu, then go use Visual studio in Windows platform.
+- Go to the folder "opencv32" in the repository
+- Click open project
+- Run the opencv32.sln in the opencv32 folder inside visual studio.
+- Run main.cpp
+  OR
+  Open the /opencv32/opencv32 folder in the repository as a C++ Project in Visual studio and run main.cpp.
+>>>>>>> origin
