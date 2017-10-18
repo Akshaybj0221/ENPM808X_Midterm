@@ -21,10 +21,34 @@ Defect Log: https://docs.google.com/spreadsheets/d/1d6eSZiVCmlSMt_dPw7nbapbw6CTz
 
 ## Overview
 
-Simple starter C++ project with:
+C++ based Motion Tracking vision system software:
 
-- cmake
-- googletest
+This project is a vision system developed for the robot to track any moving object which is in the scope of robots camera periphery. There are so many applications to this project such as for intelligent planning of robot trajectory, survellience system, object tracking, movement tracking systems etc.
+
+## Purpose
+The purpose of this project is to impart the robot the capability to get some information about the motion of any object. This module can be further integrated with the robots motion planning module to help the robot plan its movement intelligently, relying less on other sensors and more on the vision system analogous to humans.
+
+This type of module can also be integrated in many different security systems such as in surveillance cameras which are used to make sure whether an item is in its position or not (like a briefcase or a projectile).
+
+## Main Features
+The main features of the software are as follows:
+
+- Real time motion detection.
+- Real time motion tracking that can detect and track moving object
+continuously.
+- Marking and tagging of the moving object within the video feed.
+- A standalone module which can be interfaced with different modules of the robot for further applications.
+- Use of OpenCV and not ROS which makes software's integrated effective.
+
+## Results
+
+The software is very effective and fast in tracking any tagging motion simultaneously.
+Its funtionality has been tested on multiple test videos and software has a success rate of 98%.
+
+The working output of the software can be seen in the output folder of the repository or the link below:
+https://github.com/Akshaybj0221/ENPM808X_Midterm.git
+
+##
 
 ## Standard install via command-line
 ```
